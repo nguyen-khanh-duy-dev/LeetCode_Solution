@@ -10,6 +10,8 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
+
+//  Cách 1: Duyệt qua node và lưu vào mảng => Sử lý mảng để trở thành số => Công 2 số sau đó lại biến ngược lại thành Linklist
 // var addTwoNumbers = function(l1, l2) {
 //     let arrayL1 = []
 //     let arrayL2 = []
@@ -40,6 +42,10 @@
 //     return head
 // }
 
+
+// Cách 2: Công từng node, và phần nguyên sẽ được công cho thằng phía sau, phần dư sẽ được giữ lại và lưu vào link list
+
+// Ở đây sử dụng kĩ thuật dummy head(result) => Node đầu giả(Kq sẽ là từ node thứ 2 trở đi), và current sẽ tham chiếu tới result nên là các giá trị lưu lại bằng current thì bên result cũng sẽ thay đổi
 var addTwoNumbers = function(l1, l2) {
     let result = new ListNode(0)
     let current = result
